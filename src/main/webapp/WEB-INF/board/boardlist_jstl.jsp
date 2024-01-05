@@ -50,7 +50,7 @@
 							href="/erp/board/read.do?board_no=${board.board_no }&state=READ">${board.title }</a></td>
 						<td>${board.id }</td>
 						<td>${board.write_date }</td>
-						<td><a href="/springmvc/board/delete.do?board_no=${board.board_no }">삭제</a></td>
+						<td><a href="/erp/board/delete.do?board_no=${board.board_no }">삭제</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

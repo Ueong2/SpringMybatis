@@ -37,6 +37,13 @@ public class BoardController {
 		return "redirect:/board/list.do";
 	}
 	
+	@RequestMapping(value = "/board/delete")
+	public String delete(String board_no) {
+		System.out.println("JSTL게시판 delete => " + board_no);
+		service.delete(board_no);
+		return "redirect:/board/list.do";
+	}
+	
 	@RequestMapping(value = "/board/read.do")
 	public String read(String board_no, String state, Model model) {
 		BoardDTO board = service.getBoardInfo(board_no);

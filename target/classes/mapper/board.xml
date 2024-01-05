@@ -23,4 +23,10 @@
 		FROM		TBBOARD
 		WHERE		BOARD_NO = #{board_no}
 	</select>
+	
+	<delete id="delete">
+		DELETE		
+		FROM		TBBOARD
+		WHERE		BOARD_NO = #{board_no}
+	</delete>
 </mapper>
