@@ -4,8 +4,22 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
        
 <tiles-definitions>
-	<definition name="board/list" extends="mainTemplate">
-		<put-attribute name="menu" value="/WEB-INF/menu/board_menu.jsp"/>
-		<put-attribute name="content" value="/WEB-INF/board/boardlist_jstl.jsp"/>
+	<definition name="indexTemplate" template="/WEB-INF/layout/index.jsp">
+		<!-- 사이드바 JSP파일 경로를 직접 입력 -->
+		<put-attribute name="top" value="/WEB-INF/include/top.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/include/mainContent.jsp"></put-attribute>
 	</definition>
+	
+	<definition name="mainTemplate" template="/WEB-INF/layout/mainLayout.jsp">
+		<!-- name : 뷰 JSP파일에서의 mapping을 위함 // value : 사이드바로 사용되는 JSP파일 경로를 직접 입력 -->
+		<put-attribute name="top" value="/WEB-INF/include/top.jsp"></put-attribute>		
+		<put-attribute name="menu" value="/WEB-INF/menu/pub_menu.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/emp/login.jsp"></put-attribute>
+	</definition>
+	
+	<!-- 뷰 -->
+	<!-- name : 컨트롤러에서 response할 뷰의 이름 // extends : 위에서 설정한 Template를 상속 -->
+	<!-- 이를 통해 컨트롤러에서 name의 return 만으로도 뷰를 호출할 수 있다 -->
+	<definition name="indexdir" extends="indexTemplate"></definition>
+	<definition name="logindir" extends="mainTemplate"></definition>
 </tiles-definitions>

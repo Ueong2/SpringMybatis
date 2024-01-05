@@ -4,18 +4,21 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
        
 <tiles-definitions>
-	<definition name="indexTemplate" template="/WEB-INF/layout/index.jsp">
-		<put-attribute name="top" value="/WEB-INF/include/top.jsp"></put-attribute>
-		<put-attribute name="content" value="/WEB-INF/include/mainContent.jsp"></put-attribute>
+	<!-- extends를 통해 top을 상속하였으므로 적을 필요 없음. menu, content는 수정 필요 -->
+	<definition name="board/list" extends="mainTemplate">
+		<put-attribute name="menu" value="/WEB-INF/menu/board_menu.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/board/boardlist_jstl.jsp"/>
 	</definition>
 	
-	<definition name="mainTemplate" template="/WEB-INF/layout/mainLayout.jsp">
-		<put-attribute name="top" value="/WEB-INF/include/top.jsp"></put-attribute>
-		<put-attribute name="menu" value="/WEB-INF/menu/pub_menu.jsp"></put-attribute>
-		<put-attribute name="content" value="/WEB-INF/emp/login.jsp"></put-attribute>
+	<definition name="board/write" extends="mainTemplate">
+		<put-attribute name="menu" value="/WEB-INF/menu/board_menu.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/board/board_write.jsp"/>
 	</definition>
 	
-	<!-- 뷰 -->
-	<definition name="index" extends="indexTemplate"></definition>
-	<definition name="login" extends="mainTemplate"></definition>
+	<definition name="board/read" extends="mainTemplate">
+		<put-attribute name="menu" value="/WEB-INF/menu/board_menu.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/board/board_read.jsp"/>
+	</definition>
+	
+	
 </tiles-definitions>

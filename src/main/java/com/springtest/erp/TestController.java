@@ -20,7 +20,7 @@ public class TestController {
 	public ModelAndView main() {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("msg", "스프링 컨트롤러에서 전달하는 메시지");
-		mav.setViewName("test/index");
+		mav.setViewName("test/index10");
 		return mav;
 	}
 	
@@ -34,6 +34,6 @@ public class TestController {
 	@RequestMapping(value = "/emp/insert.do", method = RequestMethod.POST)
 	public String insert() {
 		System.out.println("DB에 데이터 insert");
-		return "test/index";
+		return "test/index10";
 	}
 }

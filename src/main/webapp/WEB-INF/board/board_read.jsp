@@ -13,17 +13,12 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 
-	$(document).ready(function(){ //자바스크립트가 실행되면
-		data = "${board.category}"//서버에서 받아온 board객체의 getCategory()메소드를 호출해서 값을 받은 후에 자바스크립트 data변수에 저장해주
-		$("#category").val(data).attr("selected","selected");
-	});
-
 </script>
 </head>
 <body>
 
 	<form class="form-horizontal" 
-		action="/springmvc/board/read.do?state=UPDATE&board_no=${board.board_no }" 
+		action="/erp/board/read.do?state=UPDATE&board_no=${board.board_no }" 
 		method="post" >
 
 		

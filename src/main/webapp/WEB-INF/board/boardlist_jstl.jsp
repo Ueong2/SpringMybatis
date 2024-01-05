@@ -47,7 +47,7 @@
 					<tr>
 						<td>${board.board_no }</td>
 						<td><a
-							href="/springmvc/board/read.do?board_no=${board.board_no }&state=READ">${board.title }</a></td>
+							href="/erp/board/read.do?board_no=${board.board_no }&state=READ">${board.title }</a></td>
 						<td>${board.id }</td>
 						<td>${board.write_date }</td>
 						<td><a href="/springmvc/board/delete.do?board_no=${board.board_no }">삭제</a></td>
@@ -64,7 +64,7 @@
 			<option value="write_date">작성일</option>
 		</select> <input type="text" name="search" /> <input type="submit" value="검색">
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="" style="text-align: right;">글쓰기</a></li>
+			<li><a href="/erp/board/write" style="text-align: right;">글쓰기</a></li>
 		</ul>
 	</form>
 

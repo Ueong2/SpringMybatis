@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class indexController {
 	@RequestMapping("/index.do")
 	public String index() {
-		return "index";
+		return "indexdir";
 	}
 
 	@RequestMapping("/emp/login.do")
 	public String login() {
-		return "login";
+		return "logindir";
 	}
 }

@@ -34,6 +34,7 @@
 	<div>
 		<!-- 이곳에 top화면을 연결하세요" -->
 		<tiles:insertAttribute name="top"></tiles:insertAttribute>
+		<!-- 이곳에 top화면을 연결하세요" -->
 	</div>
 	<div style="background-color: #edeef1;padding: 20px;height: 800px">
 		
@@ -47,12 +48,14 @@
 				         font-weight: bolder;">${loginUser.job_category}</div>
 
 				       	<!-- 이곳에 menu화면을 연결하세요" 메뉴 다시 매핑하기 -->
+					<tiles:insertAttribute name="menu"></tiles:insertAttribute>	
      				</div>
 			 	</div>
 			 	<div class="col-sm-8" style="background-color: white;height: 800px;">
 
 			 		<!-- 이곳에 content화면을 연결하세요" -->	
-					<tiles:insertAttribute name="content"></tiles:insertAttribute>	 	
+					<tiles:insertAttribute name="content"></tiles:insertAttribute>	 
+			 		<!-- 이곳에 content화면을 연결하세요" -->		
 				</div>
 			</div>
 	</div>

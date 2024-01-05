@@ -17,8 +17,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int insert(BoardDTO board) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.insert(board);
 	}
 
 	@Override
@@ -28,8 +27,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public BoardDTO getBoardInfo(String board_no) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.read(board_no);
 	}
 
 	@Override

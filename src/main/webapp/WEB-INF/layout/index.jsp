@@ -30,10 +30,12 @@
 	<div>
 		<!-- 이곳에 top화면을 연결하세요" -->
 		<tiles:insertAttribute name="top"></tiles:insertAttribute>
+		<!-- 이곳에 top화면을 연결하세요" -->
 	</div>
 	<div style="background-color: #edeef1;padding: 20px;height: 800px" id="main">
 		<!-- 이곳에 mainContent화면을 연결하세요" -->	
 		<tiles:insertAttribute name="content"></tiles:insertAttribute>
+		<!-- 이곳에 mainContent화면을 연결하세요" -->	
 	</div>
 </body>
 </html>
